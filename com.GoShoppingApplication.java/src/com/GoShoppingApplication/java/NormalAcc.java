@@ -6,15 +6,16 @@ public abstract class NormalAcc extends ShopAcc{
 	public NormalAcc (int accNo , String accNm, float charges , float deliveryCharges)
 	{
 		super(accNo,accNm,charges);
-		this.deliveryCharges =deliveryCharges;
+		this.deliveryCharges =100;
 	}
 	public float getdeliveryCharges() {
 		return deliveryCharges;
 	}
-	public void bookProduct(float bp) {
-		super.bookProduct(bp);
+	
+	public void bookProduct(float deliveryCharges) {
+		System.out.println("Your delevery charge is :"+deliveryCharges);
 	}
 	public String toString() {
-		return super.toString();
+		return "NormalAcc(Account No: "+ getaccNo() +" | Account Name : "+getaccNm()+" | Charges: "+getcharges()+" | Delivery charges : "+deliveryCharges+")";
 	}	
 }

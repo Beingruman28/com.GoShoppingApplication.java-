@@ -8,9 +8,9 @@ public abstract class ShopAcc {
     public ShopAcc(int accNo , String accNm, float charges)
     {
     	super();
-    	this.accNo = accNo;
-    	this.accNm = accNm;
-    	this.charges = charges;
+    	 this.setaccNo(accNo);
+		 this.setaccNm(accNm);
+		 this.setCharges(charges);
     }
    public  int getaccNo()
    {
@@ -28,18 +28,25 @@ public abstract class ShopAcc {
    }
    public  float getcharges()
    {
-	  return charges ;
+	  return getcharges() ;
    }
    public void setcharges(float charges) {
-	   this.charges=charges;
+	   this.setcharges(charges);
    }
-   public void bookProduct(float bp) {
-		bookProduct(bp);
+   public float getCharges() {
+		return charges;
 	}
-   public void items(float it) {
-		items (it);
+	public void setCharges(float charges) {
+		this.charges = charges;
+	}
+   public void bookProduct(float charges) {
+		this.setcharges(charges);
+	}
+   public void items(float charges) {
+	   this.setcharges(charges);
 	}
 	public String toString() {
-		 return toString();
+		
+		 return "ShopAcc(Account No: "+ getaccNo() +"Charges: "+getcharges()+" Account Name : "+getaccNm()+")";
 	}	
 }
