@@ -28,7 +28,7 @@ public abstract class ShopAcc {
    }
    public  float getcharges()
    {
-	  return getcharges() ;
+	  return charges;
    }
    public void setcharges(float charges) {
 	   this.setcharges(charges);
