@@ -1,5 +1,12 @@
 package com.GoShoppingApplication.java;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = " primeacc")
 public abstract class PrimeAcc extends ShopAcc{
 	private boolean isPrime;
 	private static final float deliveryCharges = 100;
@@ -11,6 +18,16 @@ public abstract class PrimeAcc extends ShopAcc{
 		 this.setaccNo(accNo);
 		this.isPrime = isPrime;
 	}
+	@Id
+	@Column(name = "accNo")
+	public int accNo ;
+	@Column(name = "accNm")
+	public String accNm; 
+	@Column(name = "charges")
+	public float charges; 
+	@Column(name = "IsPrime")
+	public boolean IsPrime;
+	
 	public boolean getisPrime() {
 		return isPrime;
 	}

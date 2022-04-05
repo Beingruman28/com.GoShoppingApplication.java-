@@ -1,6 +1,11 @@
 package com.GoShoppingApplication.java;
 
-public abstract class ShopAcc {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+public abstract class ShopAcc implements Serializable{
 	private int accNo;
     private String accNm;
     private float charges;
@@ -12,6 +17,14 @@ public abstract class ShopAcc {
 		 this.setaccNm(accNm);
 		 this.setCharges(charges);
     }
+    @Id
+    @Column(name="accNo")
+    public int accno ;
+    @Column(name="accNm")
+    public String accnm;
+    @Column(name="Charges")
+    public float Charges;
+    
    public  int getaccNo()
    {
 	  return accNo ;
